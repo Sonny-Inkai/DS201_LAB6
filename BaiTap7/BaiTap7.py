@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 # Load model
-model = keras.models.load_model('pneumonia_vgg16.keras') 
+model = keras.models.load_model('/content/drive/MyDrive/Model_lab6_ds201/pneumonia_vgg16_bai7.keras') 
 
 def preprocess_image(img):
     img = img.resize((227, 227))
@@ -13,7 +13,7 @@ def preprocess_image(img):
     img_array = img_array / 255.0
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
-    
+
 # Giao diện Streamlit
 st.title("Bài tập 7")
 st.header("Nhận diện bệnh viêm phổi từ ảnh X-Quang")

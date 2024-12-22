@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 # Load model
-model = keras.models.load_model('gender_mobilenetv2.keras')  # Thay 'gender_mobilenetv2.keras' bằng tên file model của bạn
+model = keras.models.load_model('/content/drive/MyDrive/Model_lab6_ds201/bai12.keras')  # Thay 'gender_mobilenetv2.keras' bằng tên file model của bạn
 
 def preprocess_image(img):
     img = img.resize((227, 227))
