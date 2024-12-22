@@ -6,14 +6,14 @@ import numpy as np
 # Load model
 model = keras.models.load_model('pneumonia_vgg16.keras') 
 
-# Hàm tiền xử lý ảnh
 def preprocess_image(img):
-    img = img.resize((227, 227))  # Resize ảnh về kích thước mà mô hình yêu cầu
+    img = img.resize((227, 227))
+    img = img.convert('RGB')  # Chuyển đổi sang ảnh màu RGB
     img_array = np.array(img)
-    img_array = img_array / 255.0  # Chuẩn hóa giá trị pixel về khoảng [0, 1]
-    img_array = np.expand_dims(img_array, axis=0)  # Thêm chiều batch
+    img_array = img_array / 255.0
+    img_array = np.expand_dims(img_array, axis=0)
     return img_array
-
+    
 # Giao diện Streamlit
 st.title("Bài tập 7")
 st.header("Nhận diện bệnh viêm phổi từ ảnh X-Quang")
