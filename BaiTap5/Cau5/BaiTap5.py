@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 # Load model
-model = tf.keras.models.load_model('C:\\Users\\GemiBook\\Downloads\\SONNY\\UIT_HK1_2024_2025\\DS201\\LAB6\\BaiTap5\\Cau5\\nn_mnist.keras')
+model = tf.keras.models.load_model('/kaggle/input/nmist_model/tensorflow2/default/1/nn_mnist.keras')
 
 # Hàm tiền xử lý ảnh
 def preprocess_image(img):
